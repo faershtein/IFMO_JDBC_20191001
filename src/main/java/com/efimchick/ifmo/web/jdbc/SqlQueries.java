@@ -10,7 +10,7 @@ public class SqlQueries {
 
     //Select employees having no more than 5 characters in last name sorted by last name in ascending order
     //language=HSQLDB
-    String select02 = "SELECT * FROM EMPLOYEE WHERE LENGTH(LASTNAME) <= 5 ORDER BY LASTNAME";
+    String select02 = "SELECT * FROM EMPLOYEE WHERE length(LASTNAME) <= 5 ORDER BY LASTNAME";
 
     //Select employees having salary no less than 2000 and no more than 3000
     //language=HSQLDB
@@ -22,16 +22,16 @@ public class SqlQueries {
 
     //Select employees assigned to a department and corresponding department name
     //language=HSQLDB
-    String select05 = "select em.LASTNAME, em.SALARY, d.name from EMPLOYEE em  inner join DEPARTMENT d on em.DEPARTMENT = d.ID ";
+    String select05 = "select em.LASTNAME, em.FIRSTNAME, em.SALARY, d.name from EMPLOYEE em  inner join DEPARTMENT d on em.DEPARTMENT = d.ID";
 
     //Select all employees and corresponding department name if there is one.
     //Name column containing name of the department "depname".
     //language=HSQLDB
-    String select06 = "select em.LASTNAME, em.SALARY, d.NAME as depname from EMPLOYEE em left join DEPARTMENT d on em.DEPARTMENT = d.ID";
+    String select06 = "select em.LASTNAME,em.FIRSTNAME, em.SALARY, d.NAME as depname from EMPLOYEE em left join DEPARTMENT d on em.DEPARTMENT = d.ID";
 
     //Select total salary pf all employees. Name it "total".
     //language=HSQLDB
-    String select07 = "select  sum(SALARY) AS total from EMPLOYEE";
+    String select07 = "select sum(SALARY) AS total from EMPLOYEE";
 
     //Select all departments and amount of employees assigned per department
     //Name column containing name of the department "depname".
@@ -48,7 +48,7 @@ public class SqlQueries {
     //Name column containing employee lastname "employee".
     //Name column containing manager lastname "manager".
     //language=HSQLDB
-    String select10 = "select e.LASTNAME as employee, m.LASTNAME as manager from EMPLOYEE e left join EMPLOYEE m on e.MANAGER = m.ID";
+    String select10 = "select em.LASTNAME as employee, ma.LASTNAME as manager from EMPLOYEE em left join EMPLOYEE ma on em.MANAGER = ma.ID";
 
 
 }
