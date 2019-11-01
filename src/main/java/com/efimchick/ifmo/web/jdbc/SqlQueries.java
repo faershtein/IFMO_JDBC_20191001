@@ -28,8 +28,8 @@ public class SqlQueries {
     //Select all employees and corresponding department name if there is one.
     //Name column containing name of the department "depname".
     //language=HSQLDB
-    String select06 = "SELECT emp.id, FIRSTNAME, LASTNAME, SALARY, d.NAME " +
-            "from EMPLOYEE emp " + "LEFT JOIN DEPARTMENT D on emp.DEPARTMENT = D.ID";;
+    String select06 = "SELECT emp.ID, FIRSTNAME, LASTNAME, SALARY, d.NAME " +
+            "from EMPLOYEE emp " + "LEFT JOIN DEPARTMENT D on emp.DEPARTMENT = D.ID";
 
     //Select total salary pf all employees. Name it "total".
     //language=HSQLDB
