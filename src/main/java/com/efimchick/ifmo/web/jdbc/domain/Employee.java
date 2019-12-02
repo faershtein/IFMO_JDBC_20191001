@@ -38,9 +38,6 @@ public class Employee {
         this.salary = salary.setScale(5, RoundingMode.HALF_UP);
     }
 
-
-
-
     public BigInteger getId() {
         return id;
     }
