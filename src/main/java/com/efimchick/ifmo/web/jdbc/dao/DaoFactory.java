@@ -1,11 +1,11 @@
 package com.efimchick.ifmo.web.jdbc.dao;
 
 public class DaoFactory {
-    public EmployeeDao employeeDAO() {
-        throw new UnsupportedOperationException();
+    public EmployeeDao employeeDAO()  {
+        return new EmployeeDaoImpl();
     }
 
-    public DepartmentDao departmentDAO() {
-        throw new UnsupportedOperationException();
+    public DepartmentDao departmentDAO()  {
+        return new DepartmentDaoImpl();
     }
 }
